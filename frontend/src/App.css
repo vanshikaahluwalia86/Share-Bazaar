@@ -129,10 +129,21 @@
 }
 
 .auth-logo {
-  display: inline-flex;
+  display: flex;
+  justify-content: center;
   align-items: center;
-  gap: 10px;
-  margin-bottom: 8px;
+  margin-bottom: 10px;
+}
+
+.auth-logo-img {
+  height: 52px;
+  width: auto;
+  object-fit: contain;
+  display: block;
+}
+
+[data-theme="dark"] .auth-logo-img {
+  filter: invert(1) hue-rotate(180deg);
 }
 
 .auth-logo-icon {

@@ -200,10 +200,12 @@ export default function AuthPage({ onAuthSuccess, theme, onToggleTheme }) {
         {/* Branding */}
         <div className="auth-header">
           <div className="auth-logo">
-            <span className="auth-logo-icon">📈</span>
-            <span className="auth-brand-name">ShareBazaar</span>
+            <img
+              src="/logo-full.png"
+              alt="ShareBazaar"
+              className="auth-logo-img"
+            />
           </div>
-          <h1 className="auth-welcome-title">Welcome to ShareBazaar</h1>
           <p className="auth-subtitle">
             Your market. Your watchlist. Your attention.
           </p>
