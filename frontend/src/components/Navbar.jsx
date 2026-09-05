@@ -10,10 +10,13 @@ export default function Navbar({ activeTab, onSelectTab, currentUser, onLogout, 
   return (
     <nav className="top-navbar">
       <div className="navbar-container">
-        {/* Left: Brand Logo & Name */}
+        {/* Left: Brand Logo */}
         <div className="navbar-brand" onClick={() => onSelectTab('home')}>
-          <span className="brand-icon">📈</span>
-          <span className="brand-text">ShareBazaar</span>
+          <img
+            src="/logo-full.png"
+            alt="ShareBazaar"
+            className="brand-logo-img"
+          />
         </div>
 
         {/* Center: Navigation Tabs */}

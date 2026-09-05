@@ -626,6 +626,23 @@ body {
   justify-content: space-between;
 }
 .navbar-brand { display: flex; align-items: center; gap: 8px; cursor: pointer; user-select: none; }
+.brand-logo-img {
+  height: 40px;
+  width: auto;
+  display: block;
+  object-fit: contain;
+  border-radius: 6px;
+}
+/* In dark mode: invert whites so the white-bg logo blends with dark navbar */
+[data-theme="dark"] .brand-logo-img {
+  filter: invert(1) hue-rotate(180deg);
+}
+@media (max-width: 768px) {
+  .brand-logo-img { height: 30px; }
+}
+@media (max-width: 480px) {
+  .brand-logo-img { height: 26px; }
+}
 .brand-icon { font-size: 24px; }
 .brand-text {
   font-size: 18px;
