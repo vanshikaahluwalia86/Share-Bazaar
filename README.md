@@ -2,8 +2,6 @@
 
 > **"Don't make me scan my watchlist. Tell me what changed and what deserves my attention."**
 
-A hackathon MVP built for the Groww problem statement.
-
 ## Architecture
 
 ```
