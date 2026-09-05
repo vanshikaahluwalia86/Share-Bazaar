@@ -2243,19 +2243,44 @@ body {
 }
 
 .ticker-label-badge {
-  background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%);
-  color: white;
+  background: var(--bg-secondary);
+  color: var(--text-main);
   padding: 4px 10px;
-  font-weight: 800;
-  font-size: 0.7rem;
-  border-radius: 4px;
+  font-weight: 700;
+  font-size: 0.68rem;
+  border-radius: 6px;
   z-index: 10;
   flex-shrink: 0;
   text-transform: uppercase;
-  letter-spacing: 0.5px;
+  letter-spacing: 0.6px;
   margin-left: 10px;
   margin-right: 14px;
-  box-shadow: 0 2px 4px rgba(220, 38, 38, 0.3);
+  border: 1px solid var(--border);
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  white-space: nowrap;
+}
+
+/* Green + Red dot indicators inside the badge */
+.ticker-label-badge::before {
+  content: '';
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #10b981;
+  flex-shrink: 0;
+}
+
+.ticker-label-badge::after {
+  content: '';
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #ef4444;
+  flex-shrink: 0;
 }
 
 .ticker-marquee-track {
@@ -3485,7 +3510,9 @@ body {
 }
 
 [data-theme="dark"] .ticker-label-badge {
-  box-shadow: none;
+  background: #1e2027;
+  border-color: #363b47;
+  color: #c9cdd8;
 }
 
 

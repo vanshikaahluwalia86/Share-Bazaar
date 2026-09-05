@@ -93,7 +93,7 @@ export default function TickerCarousel({ indexes, stocks = [] }) {
       symbol: s.symbol,
       price: s.price,
       changePercent: s.changePercent,
-      tag: '🚀 TOP GAINER',
+      tag: 'GAINER',
       type: 'gainer',
     });
   });
@@ -104,7 +104,7 @@ export default function TickerCarousel({ indexes, stocks = [] }) {
       symbol: s.symbol,
       price: s.price,
       changePercent: s.changePercent,
-      tag: '📉 TOP LOSER',
+      tag: 'LOSER',
       type: 'loser',
     });
   });
@@ -114,14 +114,14 @@ export default function TickerCarousel({ indexes, stocks = [] }) {
 
   return (
     <div className="ticker-carousel-container">
-      <div className="ticker-label-badge">🚀 TOP GAINERS & LOSERS</div>
+      <div className="ticker-label-badge">Gainers & Losers</div>
       <div className="ticker-marquee-track">
         <div className="ticker-marquee-content">
           {displayItems.map((item, idx) => {
             const isUp = (item.changePercent || 0) >= 0;
             return (
               <div key={`${item.symbol}-${idx}`} className="ticker-item">
-                <span className="ticker-tag-label">{item.tag}</span>
+                <span className={`ticker-tag-label${item.type ? ` ticker-tag-label--${item.type}` : ''}`}>{item.tag}</span>
                 <span className={`ticker-symbol ${item.isIndex ? 'ticker-symbol--index' : ''}`}>
                   {item.symbol}
                 </span>
