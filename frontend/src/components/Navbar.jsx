@@ -64,7 +64,7 @@ export default function Navbar({ activeTab, onSelectTab, currentUser, onLogout, 
             >
               <div className="avatar-circle">{initials}</div>
               <span className="user-name">{displayName}</span>
-              <span className="chevron-down">▾</span>
+              <span className={`chevron-down ${showUserMenu ? 'chevron-down--open' : ''}`}>▾</span>
             </button>
 
           {showUserMenu && (
